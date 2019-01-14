@@ -13,7 +13,7 @@ process mixcr {
 	publishDir "results/mixcr_output", mode: 'copy' 
 
 	output:
-	file "clones_exported.txt" into clones 
+	file "${name}_clones_exported.txt" into clones 
 
 	input:
 	set val(name), file(reads) from raw_reads
